@@ -21,6 +21,12 @@
 		717225DB26AFA2810084F236 /* Empty.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 717225D926AFA2810084F236 /* Empty.storyboard */; };
 		717225DE26AFA2E20084F236 /* Discover.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 717225DC26AFA2E20084F236 /* Discover.storyboard */; };
 		717225E126AFA32B0084F236 /* Me.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 717225DF26AFA32B0084F236 /* Me.storyboard */; };
+		71FA0BAC26AFADB200A3CB82 /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71FA0BAB26AFADB200A3CB82 /* UIButton+Extension.swift */; };
+		71FA0BAF26AFB4A500A3CB82 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71FA0BAE26AFB4A500A3CB82 /* BaseViewController.swift */; };
+		71FA0BB126AFB61B00A3CB82 /* VistorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71FA0BB026AFB61B00A3CB82 /* VistorView.swift */; };
+		71FA0BB326AFB63F00A3CB82 /* VistorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71FA0BB226AFB63F00A3CB82 /* VistorView.xib */; };
+		71FA0BB526B0009D00A3CB82 /* UIBarButtonItem+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71FA0BB426B0009D00A3CB82 /* UIBarButtonItem+Extension.swift */; };
+		71FA0BB726B0047100A3CB82 /* TitleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71FA0BB626B0047100A3CB82 /* TitleButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +46,12 @@
 		717225DA26AFA2810084F236 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = weibo/Base.lproj/Empty.storyboard; sourceTree = SOURCE_ROOT; };
 		717225DD26AFA2E20084F236 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = weibo/Base.lproj/Discover.storyboard; sourceTree = SOURCE_ROOT; };
 		717225E026AFA32B0084F236 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = weibo/Base.lproj/Me.storyboard; sourceTree = SOURCE_ROOT; };
+		71FA0BAB26AFADB200A3CB82 /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
+		71FA0BAE26AFB4A500A3CB82 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		71FA0BB026AFB61B00A3CB82 /* VistorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VistorView.swift; sourceTree = "<group>"; };
+		71FA0BB226AFB63F00A3CB82 /* VistorView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VistorView.xib; sourceTree = "<group>"; };
+		71FA0BB426B0009D00A3CB82 /* UIBarButtonItem+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Extension.swift"; sourceTree = "<group>"; };
+		71FA0BB626B0047100A3CB82 /* TitleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,12 +84,14 @@
 		717225AE26AF91A10084F236 /* weibo */ = {
 			isa = PBXGroup;
 			children = (
-				717225D826AFA2610084F236 /* Resources */,
+				71FA0BAD26AFB47D00A3CB82 /* Visitor */,
 				717225CF26AF9A7F0084F236 /* Main */,
-				717225C626AF9A0E0084F236 /* Me */,
-				717225C526AF9A050084F236 /* Discover */,
-				717225C426AF99FA0084F236 /* Message */,
 				717225C326AF99EC0084F236 /* Home */,
+				717225C426AF99FA0084F236 /* Message */,
+				717225C526AF9A050084F236 /* Discover */,
+				717225C626AF9A0E0084F236 /* Me */,
+				71FA0BAA26AFACED00A3CB82 /* Tools */,
+				717225D826AFA2610084F236 /* Resources */,
 				717225AF26AF91A10084F236 /* AppDelegate.swift */,
 				717225B526AF91A10084F236 /* Main.storyboard */,
 				717225B826AF91A20084F236 /* Assets.xcassets */,
@@ -137,6 +151,26 @@
 				717225D926AFA2810084F236 /* Empty.storyboard */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		71FA0BAA26AFACED00A3CB82 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				71FA0BAB26AFADB200A3CB82 /* UIButton+Extension.swift */,
+				71FA0BB426B0009D00A3CB82 /* UIBarButtonItem+Extension.swift */,
+				71FA0BB626B0047100A3CB82 /* TitleButton.swift */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		71FA0BAD26AFB47D00A3CB82 /* Visitor */ = {
+			isa = PBXGroup;
+			children = (
+				71FA0BAE26AFB4A500A3CB82 /* BaseViewController.swift */,
+				71FA0BB026AFB61B00A3CB82 /* VistorView.swift */,
+				71FA0BB226AFB63F00A3CB82 /* VistorView.xib */,
+			);
+			path = Visitor;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,6 +234,7 @@
 				717225BC26AF91A20084F236 /* LaunchScreen.storyboard in Resources */,
 				717225B926AF91A20084F236 /* Assets.xcassets in Resources */,
 				717225D726AFA1CD0084F236 /* Message.storyboard in Resources */,
+				71FA0BB326AFB63F00A3CB82 /* VistorView.xib in Resources */,
 				717225B726AF91A10084F236 /* Main.storyboard in Resources */,
 				717225DE26AFA2E20084F236 /* Discover.storyboard in Resources */,
 				717225E126AFA32B0084F236 /* Me.storyboard in Resources */,
@@ -216,10 +251,15 @@
 			files = (
 				717225C826AF9A380084F236 /* MeController.swift in Sources */,
 				717225D126AF9AC00084F236 /* MainController.swift in Sources */,
+				71FA0BB526B0009D00A3CB82 /* UIBarButtonItem+Extension.swift in Sources */,
+				71FA0BB126AFB61B00A3CB82 /* VistorView.swift in Sources */,
+				71FA0BB726B0047100A3CB82 /* TitleButton.swift in Sources */,
 				717225CE26AF9A650084F236 /* HomeController.swift in Sources */,
 				717225CC26AF9A5A0084F236 /* MessageController.swift in Sources */,
 				717225CA26AF9A4B0084F236 /* DiscoverController.swift in Sources */,
+				71FA0BAF26AFB4A500A3CB82 /* BaseViewController.swift in Sources */,
 				717225B026AF91A10084F236 /* AppDelegate.swift in Sources */,
+				71FA0BAC26AFADB200A3CB82 /* UIButton+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

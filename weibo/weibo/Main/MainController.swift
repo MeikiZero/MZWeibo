@@ -8,22 +8,31 @@
 import UIKit
 
 class MainController: UITabBarController {
-
+    
+    /// 懒加载属性
+    private lazy var composeBtn = UIButton(imageName: "tabbar_compose_icon_add", bgImageName: "tabbar_compose_button")
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        setComposeBtn()
     }
     
 
-    /*
-    // MARK: - Navigation
+}
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+// MARK: - 设置UI界面
+extension MainController {
+    private func setComposeBtn() {
+        tabBar.addSubview(composeBtn)
+        composeBtn.center = CGPoint(x: tabBar.center.x, y: tabBar.bounds.height * 0.5)
+        composeBtn.addTarget(self, action: #selector(composeBtnClick), for: .touchUpInside)
     }
-    */
+}
 
+// MARK: - 事件监听
+extension MainController {
+    @objc private func composeBtnClick() {
+        print("composeBtnClick")
+    }
 }
