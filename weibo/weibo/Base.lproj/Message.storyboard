@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ZHc-9s-evh">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Root View Controller-->
+        <scene sceneID="xM2-dJ-ijH">
+            <objects>
+                <tableViewController id="OvM-VK-dmj" customClass="MessageController" customModule="weibo" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" title="Root View Controller" id="ggg-O0-fHT"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4oW-eX-glL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2029" y="207"/>
+        </scene>
+        <!--消息-->
+        <scene sceneID="6I4-m4-Tti">
+            <objects>
+                <navigationController id="ZHc-9s-evh" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="消息" image="tabbar_message_center" selectedImage="tabbar_message_center_highlighted" id="Q9p-V2-8My"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="iC3-GT-Zxn">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="OvM-VK-dmj" kind="relationship" relationship="rootViewController" id="Tt9-HX-hoD"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ikQ-a2-if0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1141" y="207"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="tabbar_message_center" width="30" height="30"/>
+        <image name="tabbar_message_center_highlighted" width="30" height="30"/>
+    </resources>
+</document>

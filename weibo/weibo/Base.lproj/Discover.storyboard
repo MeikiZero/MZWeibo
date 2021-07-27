@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="OXg-gl-VBm">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Root View Controller-->
+        <scene sceneID="d0e-nn-BrY">
+            <objects>
+                <tableViewController id="Fpu-xg-NDr" customClass="DiscoverController" customModule="weibo" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" title="Root View Controller" id="4FI-ry-77J"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9EC-U6-ajO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1874" y="225"/>
+        </scene>
+        <!-- 发现-->
+        <scene sceneID="mWP-OO-I2i">
+            <objects>
+                <navigationController id="OXg-gl-VBm" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title=" 发现" image="tabbar_discover" selectedImage="tabbar_discover_highlighted" id="tU0-fC-tL4"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="G27-8r-v7Z">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Fpu-xg-NDr" kind="relationship" relationship="rootViewController" id="7Jw-W0-CbA"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="y6g-73-lAR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="984" y="225"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="tabbar_discover" width="30" height="30"/>
+        <image name="tabbar_discover_highlighted" width="30" height="30"/>
+    </resources>
+</document>
