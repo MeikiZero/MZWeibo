@@ -24,7 +24,7 @@
                     <rect key="frame" x="160" y="270.5" width="94" height="90"/>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="关注一些人，回这里看看有什么惊喜" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Vs-X3-W7C">
-                    <rect key="frame" x="93" y="438.5" width="228.5" height="17"/>
+                    <rect key="frame" x="93" y="393.5" width="228.5" height="17"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="228.5" id="8ai-oe-JzY"/>
                     </constraints>
@@ -33,7 +33,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fbI-vc-Rhe">
-                    <rect key="frame" x="255.5" y="535.5" width="66" height="36"/>
+                    <rect key="frame" x="255.5" y="490.5" width="66" height="36"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="66" id="Jz4-g7-sNB"/>
                         <constraint firstAttribute="height" constant="36" id="zTZ-zN-tNQ"/>
@@ -44,7 +44,7 @@
                     </state>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Tj-TU-f34">
-                    <rect key="frame" x="93" y="535.5" width="66" height="36"/>
+                    <rect key="frame" x="93" y="490.5" width="66" height="36"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="36" id="0yh-Ha-QpQ"/>
                         <constraint firstAttribute="width" constant="66" id="rZk-Hp-NxZ"/>
@@ -62,7 +62,7 @@
                 <constraint firstItem="uww-tZ-DR4" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="32T-52-bZE"/>
                 <constraint firstItem="6Vs-X3-W7C" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="42l-58-3KL"/>
                 <constraint firstItem="20m-lA-nVt" firstAttribute="top" secondItem="dND-w3-dgv" secondAttribute="top" id="RRR-Q9-gM9"/>
-                <constraint firstItem="6Vs-X3-W7C" firstAttribute="bottom" secondItem="20m-lA-nVt" secondAttribute="bottom" constant="70" id="a0t-ew-6ux"/>
+                <constraint firstItem="6Vs-X3-W7C" firstAttribute="bottom" secondItem="uww-tZ-DR4" secondAttribute="bottom" constant="50" id="YJj-7i-llN"/>
                 <constraint firstItem="dND-w3-dgv" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" constant="-150" id="c4v-Pb-kuu"/>
                 <constraint firstItem="dND-w3-dgv" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="edq-Cx-GP5"/>
                 <constraint firstItem="1Tj-TU-f34" firstAttribute="leading" secondItem="6Vs-X3-W7C" secondAttribute="leading" id="iQF-nU-W1j"/>

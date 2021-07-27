@@ -9,7 +9,11 @@ import UIKit
 
 class HomeController: BaseViewController {
     
-    lazy var titleBtn = TitleButton()
+    private lazy var titleBtn = TitleButton()
+    
+    private lazy var popoverAnimator = PopoverAnimator { presented in
+        self.titleBtn.isSelected = presented
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,7 +44,11 @@ extension HomeController {
 // MARK: - 事件监听
 extension HomeController {
     @objc private func titleBtnClick() {
-        titleBtn.isSelected = !titleBtn.isSelected
-        print("titleBtnClick")
+        let popoverVc = PopoverViewController()
+        popoverVc.modalPresentationStyle = .custom
+        popoverVc.transitioningDelegate = popoverAnimator
+        popoverAnimator.presentFrame = CGRect(x: 100, y: 100, width: 180, height: 250)
+        present(popoverVc, animated: true, completion: nil)
+       
     }
 }
