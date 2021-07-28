@@ -31,6 +31,9 @@
 		71FA0BBC26B036E500A3CB82 /* PopoverViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71FA0BBA26B036E500A3CB82 /* PopoverViewController.xib */; };
 		71FA0BBE26B03CF100A3CB82 /* PopoverAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71FA0BBD26B03CF100A3CB82 /* PopoverAnimator.swift */; };
 		71FA0BC026B0532600A3CB82 /* MZPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71FA0BBF26B0532600A3CB82 /* MZPresentationController.swift */; };
+		71FA0BC426B1073700A3CB82 /* OAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71FA0BC226B1073700A3CB82 /* OAuthViewController.swift */; };
+		71FA0BC526B1073700A3CB82 /* OAuthViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71FA0BC326B1073700A3CB82 /* OAuthViewController.xib */; };
+		71FA0BC726B179DE00A3CB82 /* NetworkTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71FA0BC626B179DE00A3CB82 /* NetworkTools.swift */; };
 		E161CDD4A71FBADA8DD943AC /* Pods_weibo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B864EFA7FCFB44C3F71F20F /* Pods_weibo.framework */; };
 /* End PBXBuildFile section */
 
@@ -63,6 +66,9 @@
 		71FA0BBA26B036E500A3CB82 /* PopoverViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopoverViewController.xib; sourceTree = "<group>"; };
 		71FA0BBD26B03CF100A3CB82 /* PopoverAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopoverAnimator.swift; sourceTree = "<group>"; };
 		71FA0BBF26B0532600A3CB82 /* MZPresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MZPresentationController.swift; sourceTree = "<group>"; };
+		71FA0BC226B1073700A3CB82 /* OAuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OAuthViewController.swift; sourceTree = "<group>"; };
+		71FA0BC326B1073700A3CB82 /* OAuthViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OAuthViewController.xib; sourceTree = "<group>"; };
+		71FA0BC626B179DE00A3CB82 /* NetworkTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkTools.swift; sourceTree = "<group>"; };
 		AAA6A9520CA258E6C03C611D /* Pods-weibo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-weibo.debug.xcconfig"; path = "Target Support Files/Pods-weibo/Pods-weibo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -128,6 +134,7 @@
 		717225C326AF99EC0084F236 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				71FA0BC126B1071500A3CB82 /* OAuth */,
 				71FA0BB826B036A700A3CB82 /* Popover */,
 				717225D226AFA17E0084F236 /* Home.storyboard */,
 				717225CD26AF9A650084F236 /* HomeController.swift */,
@@ -185,6 +192,7 @@
 				71FA0BB426B0009D00A3CB82 /* UIBarButtonItem+Extension.swift */,
 				71FA0BB626B0047100A3CB82 /* TitleButton.swift */,
 				71FA0BBF26B0532600A3CB82 /* MZPresentationController.swift */,
+				71FA0BC626B179DE00A3CB82 /* NetworkTools.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -207,6 +215,15 @@
 				71FA0BBD26B03CF100A3CB82 /* PopoverAnimator.swift */,
 			);
 			path = Popover;
+			sourceTree = "<group>";
+		};
+		71FA0BC126B1071500A3CB82 /* OAuth */ = {
+			isa = PBXGroup;
+			children = (
+				71FA0BC226B1073700A3CB82 /* OAuthViewController.swift */,
+				71FA0BC326B1073700A3CB82 /* OAuthViewController.xib */,
+			);
+			path = OAuth;
 			sourceTree = "<group>";
 		};
 		F9A50589770485109E661D08 /* Frameworks */ = {
@@ -282,6 +299,7 @@
 				717225D726AFA1CD0084F236 /* Message.storyboard in Resources */,
 				71FA0BBC26B036E500A3CB82 /* PopoverViewController.xib in Resources */,
 				71FA0BB326AFB63F00A3CB82 /* VistorView.xib in Resources */,
+				71FA0BC526B1073700A3CB82 /* OAuthViewController.xib in Resources */,
 				717225B726AF91A10084F236 /* Main.storyboard in Resources */,
 				717225DE26AFA2E20084F236 /* Discover.storyboard in Resources */,
 				717225E126AFA32B0084F236 /* Me.storyboard in Resources */,
@@ -342,9 +360,11 @@
 				717225D126AF9AC00084F236 /* MainController.swift in Sources */,
 				71FA0BC026B0532600A3CB82 /* MZPresentationController.swift in Sources */,
 				71FA0BB526B0009D00A3CB82 /* UIBarButtonItem+Extension.swift in Sources */,
+				71FA0BC426B1073700A3CB82 /* OAuthViewController.swift in Sources */,
 				71FA0BB126AFB61B00A3CB82 /* VistorView.swift in Sources */,
 				71FA0BBB26B036E500A3CB82 /* PopoverViewController.swift in Sources */,
 				71FA0BB726B0047100A3CB82 /* TitleButton.swift in Sources */,
+				71FA0BC726B179DE00A3CB82 /* NetworkTools.swift in Sources */,
 				717225CE26AF9A650084F236 /* HomeController.swift in Sources */,
 				71FA0BBE26B03CF100A3CB82 /* PopoverAnimator.swift in Sources */,
 				717225CC26AF9A5A0084F236 /* MessageController.swift in Sources */,

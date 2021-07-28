@@ -49,7 +49,7 @@ extension PopoverAnimator: UIViewControllerTransitioningDelegate {
 // MARK: - 弹出和消失动画
 extension PopoverAnimator: UIViewControllerAnimatedTransitioning {
     func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
-        return 3
+        return 1.0
     }
     
     
@@ -61,7 +61,7 @@ extension PopoverAnimator: UIViewControllerAnimatedTransitioning {
     private func animationForPresented(transitionContext: UIViewControllerContextTransitioning) {
         let presentView = transitionContext.view(forKey: UITransitionContextViewKey.to)!
         transitionContext.containerView.addSubview(presentView)
-        presentView.transform = CGAffineTransform(translationX: 1.0, y: 0.00001)
+        presentView.transform = CGAffineTransform(scaleX: 1.0, y: 0.0)
         presentView.layer.anchorPoint = CGPoint(x: 0.5, y: 0.0)
         UIView.animate(withDuration: transitionDuration(using: transitionContext)) {
             presentView.transform = CGAffineTransform.identity
@@ -75,7 +75,7 @@ extension PopoverAnimator: UIViewControllerAnimatedTransitioning {
     private func animationForDismissed(transitionContext: UIViewControllerContextTransitioning) {
         let dismissView = transitionContext.view(forKey: UITransitionContextViewKey.from)
         UIView.animate(withDuration: transitionDuration(using: transitionContext)) {
-            dismissView?.transform = CGAffineTransform(translationX: 1.0, y: 0.00001)
+            dismissView?.transform = CGAffineTransform(scaleX: 1.0, y: 0.0001)
         } completion: { completed in
             dismissView?.removeFromSuperview()
             transitionContext.completeTransition(completed)

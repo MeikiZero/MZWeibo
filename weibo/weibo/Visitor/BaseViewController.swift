@@ -10,7 +10,7 @@ import UIKit
 class BaseViewController: UITableViewController {
     lazy var vistorView = VistorView.vistorView()
     
-    var isLogin = true
+    var isLogin = false
     
     override func loadView() {
         isLogin ? super.loadView() : setVistorView()
@@ -49,6 +49,9 @@ extension BaseViewController {
     }
     
     @objc private func loginBtnClick() {
-        print("loginBtnClick")
+        let oauthVc = OAuthViewController()
+        let oauthNav = UINavigationController(rootViewController: oauthVc)
+        present(oauthNav, animated: true, completion: nil)
+        
     }
 }
