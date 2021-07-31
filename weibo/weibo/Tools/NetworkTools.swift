@@ -25,7 +25,7 @@ class NetworkTools: AFHTTPSessionManager {
 
 // MARK: - 网络请求
 extension NetworkTools {
-    func requst(methodType: requstType, URLString: String, parameters: [String: AnyObject], finished: @escaping (_ result: Any?, _ error: Error?) -> ()) {
+    func requst(methodType: requstType, URLString: String, parameters: [String: Any]?, finished: @escaping (_ result: Any?, _ error: Error?) -> Void) {
         
         if methodType == .GET {
             get(URLString, parameters: parameters, headers: nil, progress: nil) { task, result in
@@ -45,3 +45,36 @@ extension NetworkTools {
     }
     
 }
+
+// MARK: - 请求AccessToken
+extension NetworkTools {
+    func loadAccessToken(code: String, finished: @escaping ([String: Any]?, Error?) -> Void) {
+        let urlString = "https://api.weibo.com/oauth2/access_token"
+        
+        let parameters = ["client_id": app_key,
+                          "client_secret": app_secret,
+                          "grant_type": "authorization_code",
+                          "code": code,
+                          "redirect_uri": redirect_uri]
+        
+        requst(methodType: .POST, URLString: urlString, parameters: parameters) { result, error in
+            print(result as Any)
+            finished(result as? [String: Any], error)
+        }
+    }
+}
+
+// MARK: - 请求用户信息
+extension NetworkTools {
+    func loadUserInfo(access_token: String, uid: String, finished: @escaping ([String: Any]?, Error?) -> Void) {
+        let urlString = "https://api.weibo.com/2/users/show.json"
+        
+        let parameters = ["access_token": access_token, "uid": uid]
+        
+        requst(methodType: .GET, URLString: urlString, parameters: parameters) { result, error in
+            print(result as Any)
+            finished(result as? [String : Any], error)
+        }
+    }
+}
+
