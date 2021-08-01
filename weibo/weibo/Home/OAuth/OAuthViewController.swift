@@ -82,7 +82,7 @@ extension OAuthViewController: UIWebViewDelegate {
     }
 }
 
-// MARK: - 请求数据 4d6fa25f28cdb6780e09a609b53b5597
+// MARK: - 请求数据
 extension OAuthViewController {
     private func getAccessToken(code: String) {
         NetworkTools.shareInstance.loadAccessToken(code: code) { result, error in

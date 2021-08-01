@@ -58,7 +58,6 @@ extension NetworkTools {
                           "redirect_uri": redirect_uri]
         
         requst(methodType: .POST, URLString: urlString, parameters: parameters) { result, error in
-            print(result as Any)
             finished(result as? [String: Any], error)
         }
     }
@@ -72,8 +71,27 @@ extension NetworkTools {
         let parameters = ["access_token": access_token, "uid": uid]
         
         requst(methodType: .GET, URLString: urlString, parameters: parameters) { result, error in
-            print(result as Any)
             finished(result as? [String : Any], error)
+        }
+    }
+}
+
+// MARK: - 请求首页的数据
+extension NetworkTools {
+    func loadStatuses(finished: @escaping ([[String: Any]]?, Error?) -> Void) {
+        let urlString = "https://api.weibo.com/2/statuses/home_timeline.json"
+        let parameters = ["access_token": (UserAccountViewModel.shareInstance.account?.access_token)!]
+        
+        requst(methodType: .GET, URLString: urlString, parameters: parameters) { result, error in
+            // 获取字典的数据
+            guard let result = result else {
+                finished(nil, error)
+                return
+            }
+            let resultDict = result as! [String: Any]
+            
+            finished(resultDict["statuses"] as? [[String : Any]] , error)
+            
         }
     }
 }

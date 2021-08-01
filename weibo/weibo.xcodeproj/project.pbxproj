@@ -22,6 +22,11 @@
 		717225DB26AFA2810084F236 /* Empty.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 717225D926AFA2810084F236 /* Empty.storyboard */; };
 		717225DE26AFA2E20084F236 /* Discover.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 717225DC26AFA2E20084F236 /* Discover.storyboard */; };
 		717225E126AFA32B0084F236 /* Me.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 717225DF26AFA32B0084F236 /* Me.storyboard */; };
+		71E627CD26B6A230000A8C2F /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71E627CC26B6A230000A8C2F /* Status.swift */; };
+		71E627CF26B6A5E6000A8C2F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71E627CE26B6A5E6000A8C2F /* User.swift */; };
+		71E627D126B6AF85000A8C2F /* StatusViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71E627D026B6AF85000A8C2F /* StatusViewModel.swift */; };
+		71E627D326B6B833000A8C2F /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71E627D226B6B833000A8C2F /* Date+Extension.swift */; };
+		71E627D526B6C6EA000A8C2F /* HomeViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71E627D426B6C6EA000A8C2F /* HomeViewCell.swift */; };
 		71FA0BAC26AFADB200A3CB82 /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71FA0BAB26AFADB200A3CB82 /* UIButton+Extension.swift */; };
 		71FA0BAF26AFB4A500A3CB82 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71FA0BAE26AFB4A500A3CB82 /* BaseViewController.swift */; };
 		71FA0BB126AFB61B00A3CB82 /* VistorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71FA0BB026AFB61B00A3CB82 /* VistorView.swift */; };
@@ -62,6 +67,11 @@
 		717225DA26AFA2810084F236 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = weibo/Base.lproj/Empty.storyboard; sourceTree = SOURCE_ROOT; };
 		717225DD26AFA2E20084F236 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = weibo/Base.lproj/Discover.storyboard; sourceTree = SOURCE_ROOT; };
 		717225E026AFA32B0084F236 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = weibo/Base.lproj/Me.storyboard; sourceTree = SOURCE_ROOT; };
+		71E627CC26B6A230000A8C2F /* Status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
+		71E627CE26B6A5E6000A8C2F /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		71E627D026B6AF85000A8C2F /* StatusViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusViewModel.swift; sourceTree = "<group>"; };
+		71E627D226B6B833000A8C2F /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
+		71E627D426B6C6EA000A8C2F /* HomeViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewCell.swift; sourceTree = "<group>"; };
 		71FA0BAB26AFADB200A3CB82 /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
 		71FA0BAE26AFB4A500A3CB82 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		71FA0BB026AFB61B00A3CB82 /* VistorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VistorView.swift; sourceTree = "<group>"; };
@@ -145,9 +155,11 @@
 		717225C326AF99EC0084F236 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				71E627CB26B6A215000A8C2F /* HomeModel */,
 				71FA0BC126B1071500A3CB82 /* OAuth */,
 				71FA0BB826B036A700A3CB82 /* Popover */,
 				717225D226AFA17E0084F236 /* Home.storyboard */,
+				71E627D426B6C6EA000A8C2F /* HomeViewCell.swift */,
 				717225CD26AF9A650084F236 /* HomeController.swift */,
 			);
 			path = Home;
@@ -196,13 +208,24 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		71E627CB26B6A215000A8C2F /* HomeModel */ = {
+			isa = PBXGroup;
+			children = (
+				71E627CC26B6A230000A8C2F /* Status.swift */,
+				71E627CE26B6A5E6000A8C2F /* User.swift */,
+				71E627D026B6AF85000A8C2F /* StatusViewModel.swift */,
+			);
+			path = HomeModel;
+			sourceTree = "<group>";
+		};
 		71FA0BAA26AFACED00A3CB82 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				71E627D226B6B833000A8C2F /* Date+Extension.swift */,
 				71FA0BAB26AFADB200A3CB82 /* UIButton+Extension.swift */,
 				71FA0BB426B0009D00A3CB82 /* UIBarButtonItem+Extension.swift */,
-				71FA0BB626B0047100A3CB82 /* TitleButton.swift */,
 				71FA0BBF26B0532600A3CB82 /* MZPresentationController.swift */,
+				71FA0BB626B0047100A3CB82 /* TitleButton.swift */,
 				71FA0BC626B179DE00A3CB82 /* NetworkTools.swift */,
 				71FA0D3526B4E45100A3CB82 /* Common.swift */,
 			);
@@ -382,19 +405,24 @@
 			files = (
 				71FA0D3626B4E45100A3CB82 /* Common.swift in Sources */,
 				717225C826AF9A380084F236 /* MeController.swift in Sources */,
+				71E627CD26B6A230000A8C2F /* Status.swift in Sources */,
 				71FA0D3826B5392F00A3CB82 /* UserAccount.swift in Sources */,
 				717225D126AF9AC00084F236 /* MainController.swift in Sources */,
+				71E627D326B6B833000A8C2F /* Date+Extension.swift in Sources */,
 				71FA0BC026B0532600A3CB82 /* MZPresentationController.swift in Sources */,
 				714DA4EA26B5A28D00465FB5 /* UserAccountViewModel.swift in Sources */,
 				71FA0BB526B0009D00A3CB82 /* UIBarButtonItem+Extension.swift in Sources */,
 				71FA0BC426B1073700A3CB82 /* OAuthViewController.swift in Sources */,
 				71FA0BB126AFB61B00A3CB82 /* VistorView.swift in Sources */,
+				71E627CF26B6A5E6000A8C2F /* User.swift in Sources */,
 				71FA0BBB26B036E500A3CB82 /* PopoverViewController.swift in Sources */,
 				71FA0BB726B0047100A3CB82 /* TitleButton.swift in Sources */,
 				71FA0BC726B179DE00A3CB82 /* NetworkTools.swift in Sources */,
 				717225CE26AF9A650084F236 /* HomeController.swift in Sources */,
 				71FA0BBE26B03CF100A3CB82 /* PopoverAnimator.swift in Sources */,
+				71E627D526B6C6EA000A8C2F /* HomeViewCell.swift in Sources */,
 				717225CC26AF9A5A0084F236 /* MessageController.swift in Sources */,
+				71E627D126B6AF85000A8C2F /* StatusViewModel.swift in Sources */,
 				717225CA26AF9A4B0084F236 /* DiscoverController.swift in Sources */,
 				71FA0BAF26AFB4A500A3CB82 /* BaseViewController.swift in Sources */,
 				717225B026AF91A10084F236 /* AppDelegate.swift in Sources */,
